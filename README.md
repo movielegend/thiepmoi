@@ -57,7 +57,9 @@ python3 server.py
 * `server.py`: Máy chủ HTTP phục vụ file tĩnh và xử lý `POST /api/send-email` gửi email HTML kèm ảnh thiệp mời qua Gmail SMTP.
 * `email_config.json.example`: Tệp cấu hình SMTP mẫu an toàn để đẩy lên kho mã nguồn.
 * `gala.webp`: Hình ảnh thiệp mời đính kèm trong email xác nhận.
-* `invite.png`: Mã QR truy cập thiệp mời.
+* `thiep-moi-the-golden.png`: Ảnh thiệp mời điện tử hoàng gia độ phân giải cao kèm mã QR quét mở trang.
+* `invite.png`: Mã QR truy cập thiệp mời trực tuyến.
+* `create_invitation_card.py`: Script Python thiết kế và xuất file ảnh thiệp mời đồ họa cao cấp.
 * `generate_qr.py`: Script Python để tạo lại mã QR khi thay đổi IP hoặc tên miền.
 
 ---

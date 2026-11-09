@@ -111,14 +111,16 @@ def send_real_email(to_email, name, phone, department, note, config):
         msg.attach(msg_alternative)
         msg_alternative.attach(MIMEText(html_content, "html", "utf-8"))
 
-        # Đính kèm ảnh gala.webp dưới dạng CID để hiển thị trực tiếp trong thư
+        # Đính kèm ảnh thiệp mời chính thức hoặc gala.webp dưới dạng CID để hiển thị trực tiếp trong thư
+        card_path = BASE_DIR / "thiep-moi-the-golden.png"
         gala_path = BASE_DIR / "gala.webp"
-        if gala_path.exists():
-            with open(gala_path, "rb") as f:
+        attach_path = card_path if card_path.exists() else gala_path
+        if attach_path.exists():
+            with open(attach_path, "rb") as f:
                 img_data = f.read()
             img = MIMEImage(img_data)
             img.add_header("Content-ID", "<invitation_cup>")
-            img.add_header("Content-Disposition", "inline", filename="the-golden-invitation.webp")
+            img.add_header("Content-Disposition", "inline", filename=attach_path.name)
             msg.attach(img)
 
         # Gửi qua SMTP
