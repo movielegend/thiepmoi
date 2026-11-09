@@ -1,0 +1,18 @@
+# Secret email credentials (không đẩy mật khẩu email lên GitHub)
+email_config.json
+
+# Dữ liệu khách xác nhận gửi về server
+sent_emails/
+
+# File sao lưu tạm thời
+*.bak
+
+# Python cache & môi trường ảo
+__pycache__/
+*.pyc
+venv/
+.env
+
+# Hệ điều hành
+.DS_Store
+Thumbs.db
