@@ -751,11 +751,13 @@ textarea {
 }
 
 .email-img-preview {
-  width: 100%;
-  max-height: 160px;
-  object-fit: cover;
+  width: auto;
+  max-width: 100%;
+  max-height: 240px;
+  object-fit: contain;
   border-radius: 6px;
   display: block;
+  margin: 0 auto;
 }
 
 .email-img-caption {
@@ -1143,7 +1145,8 @@ footer small {
   }
 
   .email-img-preview {
-    max-height: 140px;
+    max-height: 200px;
+    object-fit: contain;
   }
 
   .email-info-grid {
